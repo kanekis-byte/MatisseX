@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+def version = "1.0.0"
 
 android {
     compileSdkVersion 28
@@ -21,6 +24,10 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -34,4 +41,13 @@ dependencies {
 
     compileOnly 'com.github.bumptech.glide:glide:4.9.0'
     compileOnly 'com.squareup.picasso:picasso:2.5.2'
+}
+
+publish {
+    userOrg = 'taohf'
+    groupId = 'com.zhihu.matissex'
+    artifactId = 'MatisseX'
+    publishVersion = "${version}"
+    desc = 'Matisse is a well-designed local image and video selector for Android.'
+    website = 'https://mrtaohf.github.io/'
 }
