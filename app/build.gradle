@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.taohf.matissex"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':matissex')
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+}
