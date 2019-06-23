@@ -84,7 +84,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                                             .countable(true)
                                             .capture(true)
                                             .captureStrategy(
-                                                    new CaptureStrategy(true, "com.zhihu.matissex.sample.fileprovider","test"))
+                                                    new CaptureStrategy(true, "com.taohf.matissex.sample.fileprovider","test"))
                                             .maxSelectable(9)
                                             .addFilter(new GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
                                             .gridExpectedSize(
@@ -102,6 +102,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
 
                                                 }
                                             })
+                                            .capture(true)
                                             .originalEnable(true)
                                             .maxOriginalSize(10)
                                             .autoHideToolbarOnSingleTap(true)
